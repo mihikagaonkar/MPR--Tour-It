@@ -1,0 +1,18 @@
+
+{% load static %}
+
+  <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <nav>
+        <img id='logo' src="/images/logo.png" alt="logo">
+        <ul id='title'>
+            <li>
+                <h1><a href = "{% url 'tourit:user' %}" >Tour It</a></h1>
+            </li>
+        </ul>
+        <img id='user' src="/images/user.png" alt="user">
+        <ul class="right-menu">
+            <li class="content"><a href="{% url 'tourit:trip' %}">Trips</a></li>
+            <li class="content"><a href="{% url 'tourit:logout' %}">Logout</a></li>
+            <li class="content"><a href="{% url 'tourit:account' %}">Profile</a></li>
+        </ul>
+    </nav>

@@ -1,0 +1,39 @@
+
+
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/account.css' %}" >
+</head>
+<body>
+    <h1>Account Settings</h1>
+    	<img src="{{request.user.customer.profile_pic.url}}" >
+    <div class="line"></div>
+    <form class="form" action="" method="POST">
+			{% csrf_token %}
+
+        <div class = "box">
+					<div class = "box">
+							<label >Username:</label>
+							{{form.name}}
+					</div>
+					<div class = "box">
+							<label >Email:</label>
+							{{form.email}}
+					</div>
+					<div class = "box">
+							<label >Change profile picture:</label>
+							{{ form.profile_pic }}
+					</div>
+					<input type="submit" class="submit-btn" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,189 @@
+*{
+    font-family: sans-serif;
+}
+
+.carousel{
+    position: relative;
+    width: 80%;
+    height: 425px;
+    margin: 40px auto;
+}
+
+
+.track{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in-out;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card_container{
+    height: 90%;
+    width: 225px;
+    box-shadow: 0 0 5px black;
+    margin: 20px 0 20px 0;
+    border-radius: 5px;
+    transition: transform 250ms ease-in-out;
+}
+
+.card_container:hover{
+    transform: translateY(-7px);
+}
+
+
+.image{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    margin: 30px auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.image1{
+    background-image: url('/static/images/hotel.jpg');
+}
+
+.image2{
+    background-image: url('/static/images/shopping.jpeg');
+}
+
+.image3{
+    background-image: url('/static/images/restaurant.jpg');
+}
+
+.image4{
+    background-image: url('/static/images/amusementpark.jpeg');
+}
+
+.image5{
+    background-image: url('/static/images/art.jpg');
+}
+
+.image6{
+    background-image: url('/static/images/Spiritual.jpg');
+}
+
+.image7{
+    background-image: url('/static/images/landmarks.jpeg');
+}
+
+.image8{
+    background-image: url('/static/images/nature.jpg');
+}
+
+p{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.explore{
+    display: block;
+    margin: 40px auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border: 2px solid #0984e3;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: #0984e3;
+    font-size: 15px;
+    transition: all 250ms ease-in-out;
+}
+
+.explore:hover{
+    color: white;
+    background-color: #0984e3;
+}
+
+
+.button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px;
+    transition: transform 250ms ease-in-out;
+}
+
+i{
+    font-size: 30px;
+    color: #0984e3;
+    text-align: center;
+}
+
+.button:hover i{
+    color: white;
+}
+
+.button:hover{
+    background-color: #0984e3;
+    cursor: pointer;
+}
+
+.left{
+    left: -60px;
+}
+
+.right{
+    right: -60px;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.indicator{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0;
+    margin: 0 10px;
+    background-color: #0984e3;
+    opacity: 0.3;
+}
+
+.indicator:hover{
+    cursor: pointer;
+}
+
+.current_slide{
+    opacity: 1;
+}
+
+.is_hidden{
+    display: none;
+}
+
+.card_container a{
+  text-decoration: none;
+  color: #0984e3;
+}
+.card_container a:hover{
+  color:white;
+
+}

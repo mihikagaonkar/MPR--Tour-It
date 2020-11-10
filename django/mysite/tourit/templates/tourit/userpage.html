@@ -1,0 +1,87 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '/css/automatic.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Carousel 3.0.css' %}">
+    <link rel="stylesheet" href="{% static '/css/heading.css' %}">
+    <link rel="stylesheet" href="{% static '/css/copyright.css' %}">
+</head>
+
+<body>
+    <div>
+        {%  include 'tourit/navbar.html' %}
+    </div>
+
+
+
+    <div class="home">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('/static/images/Desert.jpg');"></div>
+            <div class="slide" style="background-image: url('/static/images/Hydrangeas.jpg');"></div>
+            <div class="slide" style="background-image: url('/static/images/Jellyfish.jpg');"></div>
+        </div>
+
+        <div class="controls">
+            <div class="prev"><i class="fas fa-angle-left"></i></div>
+            <div class="next"><i class="fas fa-angle-right"></i></div>
+        </div>
+
+        <div class="automatic_indicator"></div>
+    </div>
+
+    <body>
+        <h1 class="intro">Lets Explore Mumbai</h1>
+
+    </body>
+
+    <div class="carousel">
+
+        <button class="button left is_hidden"><i class="fas fa-angle-left"></i></button>
+        <div class="container">
+            <ul class="track">
+                <li class="slide current_slide">
+                      {% for placetype in placetypes %}
+                    {% if forloop.counter|divisibleby:5 %}
+                    <li class="slide">
+                    <div class="card_container">
+                        <div class="image image1"></div>
+                        <p>{{placetype}}</p>
+                        <button class="explore"><a href="{% url 'tourit:list' placetype.id %}">explore</a></button>
+                    </div>
+
+                    {% else %}
+
+                    <div class="card_container">
+                        <div class="image image1"></div>
+                        <p>{{placetype}}</p>
+                        <button class="explore"><a href="{% url 'tourit:list' placetype.id %}">explore</a></button>
+                    </div>
+
+
+                    {% endif %}
+                   {% endfor %}
+
+            </ul>
+        </div>
+
+        <button class="button right"><i class="fas fa-angle-right"></i></button>
+
+        <div class="nav">
+            <button class="indicator current_slide"></button>
+            <button class="indicator"></button>
+        </div>
+    </div>
+
+    <p class="copyright">Copyright &copy; 2020. All rights Reserved</p>
+
+    <script src="{% static '/js/automatic.js' %}"></script>
+    <script src="{% static '/js/Carousel 3.0.js' %}"></script>
+</body>
+</html>

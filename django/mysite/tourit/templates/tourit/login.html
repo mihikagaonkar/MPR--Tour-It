@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title></title>
+          <link rel="stylesheet" href="{% static '/css/login.css' %}" type = "text/css" media = "screen">
+
+     <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+       <div class="login">
+           <h1>Login</h1>
+           <form class="login-form" action="" method="POST">
+             {% csrf_token %}
+             <div class="box">
+               <i class="fas fa-user-alt"></i>
+               <input  type="text" placeholder="Your username" name="username">
+             </div>
+             <div class="box">
+               <i class="fas fa-key"></i>
+               <input type="password"  placeholder="Your password" name="password">
+             </div>
+
+
+             <input  type="submit" class="login-btn" value="Login" >
+          </form>
+             
+             <a  class = "between" href="/reset_password">Forgot Password</a>
+          <p class = "between">
+             {% for message in messages %}
+              {{message}}
+             {% endfor %}
+          </p>
+
+      </div>
+
+
+   </body>
+</html>

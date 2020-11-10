@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Hey there,
+{{ request.user}}
+
+{% for k in order.get_itinerary_items %}
+<a href="{% url 'tourit:delete_item' k.id %}" data-balloon="remove this item from cart" class="text-danger" onclick="return confirm_delete();">
+<li>  {{ k.product.name}} </li>
+{% endfor%}
+
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script>
+  function confirm_delete(){
+    return confirm("do you want to remove this item from your itinerary");
+  }
+  </script>

@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+}
+
+.intro{
+    margin-top: 30px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: #0984e3;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.intro::before, .intro::after{
+    content: '';
+    height: 10%;
+    position: absolute;
+    display: block;
+
+}
+
+.intro::before{
+    background-color: white;
+    z-index: -1;
+    left: -15px;
+    right: -15px;
+    top: 50%;
+}
+
+.intro::after{
+    background-color: black;
+    width: 98.7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    z-index: -2;
+}
+

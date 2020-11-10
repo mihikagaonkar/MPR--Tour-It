@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="{% static '/css/register.css' %}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="signin">
+      <h1>Signup</h1>
+      <form class="signin-form" action="" method="POST">
+      {% csrf_token %}
+           <div class="box">
+               <i class="fas fa-user-alt"></i>
+               {{form.username}}
+           </div>
+           <div class="box">
+               <i class="fas fa-envelope"></i>
+                {{form.email}}
+           </div>
+          <div class="box">
+               <i class="fas fa-key"></i>
+               {{form.password1}}
+           </div>
+           <div class="box">
+               <i class="fas fa-key"></i>
+               {{form.password2}}
+           </div>
+              {{form.errors}}
+              <input type="submit" class="signin-btn" value="Signup">
+
+           </form>
+
+      </div>
+
+
+
+             <script src="{% static '/js/register.js' %}"></script>
+
+
+
+
+
+   </body>
+</html>

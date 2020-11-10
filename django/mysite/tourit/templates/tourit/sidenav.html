@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+</head>
+<body>
+<div class="sidenav appear">
+    <ul class="container">
+         {% for s in sn %}
+         <li class="menu"><p><a href="{% url 'tourit:list' s.id %}">{{ s.name }}</a></p></li>
+          {% endfor %}
+    </ul>
+</div>
+</body>

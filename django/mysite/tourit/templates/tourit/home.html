@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+</head>
+<body>
+  <div>
+      <nav>
+          <img id='logo' src="/images/logo.png" alt="logo">
+          <ul id='title'>
+              <li>
+                  <h1>Tour It</h1>
+              </li>
+          </ul>
+          
+          <ul class="right-menu">
+              <li class="content"><a href="{% url 'tourit:login' %}">login</a></li>
+              <li class="content"><a href="{% url 'tourit:register' %}">signup</a></li>
+          </ul>
+      </nav>
+  </div>
+
+
+    <div class="home">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('/static/images/Desert.jpg');" alt="random text" ></div>
+            <div class="slide" style="background-image: url( '/static/images/Hydrangeas.jpg' );"></div>
+            <div class="slide" style="background-image: url('/static/images/Jellyfish.jpg');"></div>
+        </div>
+
+        <div class="controls">
+            <div class="prev"><i class="fas fa-angle-left"></i></div>
+            <div class="next"><i class="fas fa-angle-right"></i></div>
+        </div>
+
+
+        <div class="indicator"></div>
+
+    </div>
+
+
+
+    <script src="{% static '/js/home.js' %}"></script>
+</body>
+</html>

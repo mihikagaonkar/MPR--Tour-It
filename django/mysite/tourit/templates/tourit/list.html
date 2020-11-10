@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static '/css/navbar1.css' %}"></link>
+
+</head>
+<body>
+
+   <nav>
+     <div >
+       {%  include 'tourit/navbar.html' %}
+     </div>
+
+      {%  include 'tourit/sidenav.html' %}
+   </nav>
+    <div class="grid_container">
+
+    <div class="card_container">
+        {% for placetype in places %}
+        <div class="card">
+            <div class="image"><img src="{{ placetype.pic.url}}"alt=""></div>
+            <button class="heart"><i class="far fa-heart"></i></button>
+            <div class="name"></div>
+            <div class="location">{{placetype.name}}</div>
+            <button class="explore"><a href="{% url 'tourit:detail' placetype.id %}"> explore </a></button>
+             {% if object in current %}
+            <button class="explore"><a href="{% url 'tourit:trip' %}" class = "btn btn-warning"> go to itinerary</a></button>
+            {% else %}
+            <a href="{% url 'tourit:add_to_trip' placetype.id %}" class = "btn btn-warning" object> add to itinerary</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+
+
+
+  </div>
+  </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <script src="{% static '/js/heart.js' %}"></script>
+    <script src="{% static '/js/sidenav.js' %}"></script>
+
+</body>
+</html>
