@@ -107,6 +107,7 @@ p{
     color: #0984e3;
     font-size: 15px;
     transition: all 250ms ease-in-out;
+    outline: none;
 }
 
 .explore:hover{
