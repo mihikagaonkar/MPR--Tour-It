@@ -1,0 +1,35 @@
+
+
+.sidenav{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    height: 188vh;
+    width: 225px;
+    background-color: #ebede4;
+    transition: transform 250ms ease-in-out;
+}
+
+.visiting{
+    background: #0984e3;
+}
+
+.disappear{
+    transform: translateX(-100%);
+}
+
+.appear{
+    transform: translateX(0%);
+}
+
+.menu{
+    display: block;
+    font-size: 20px;
+    transition: all 100ms ease-in-out;
+}
+
+.menu:hover{
+    background-color: #54a0ff;
+    color:white;
+    cursor: pointer;
+}
