@@ -92,10 +92,16 @@ i{
     color: white;
     background-color: #0984e3;
 }
+.explore:hover a:visited{
+    color: white;
+}
+.explore:hover a{
+    color: white;
+}
 
 a:link, a:visited{
   text-decoration: none;
-  color: black;
+  color: #0984e3;
 }
 
 .card a{

@@ -1,5 +1,3 @@
-
-
 .sidenav{
     position: absolute;
     top: 55px;
@@ -32,4 +30,8 @@
     background-color: #54a0ff;
     color:white;
     cursor: pointer;
+}
+
+.menu:hover a{
+    color: white;
 }
