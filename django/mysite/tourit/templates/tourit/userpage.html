@@ -12,24 +12,13 @@
     <link rel="stylesheet" href="{% static '/css/Carousel 3.0.css' %}">
     <link rel="stylesheet" href="{% static '/css/heading.css' %}">
     <link rel="stylesheet" href="{% static '/css/copyright.css' %}">
-    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    
 </head>
 
 <body>
     <div>
         <nav>
-            <img id='logo' src="/images/logo.png" alt="logo">
-            <ul id='title'>
-                <li>
-                    <h1>Tour It</h1>
-                </li>
-            </ul>
-            <img id='user' src="/images/user.png" alt="user">
-            <ul class="right-menu">
-                <li class="content"><a href="{% url 'tourit:trip' %}">Trips</a></li>
-                <li class="content"><a href="{% url 'tourit:logout' %}">Logout</a></li>
-                <li class="content"><a href="{% url 'tourit:account' %}">Profile</a></li>
-            </ul>
+            {%  include 'tourit/navbar.html' %}
         </nav>
     </div>
 

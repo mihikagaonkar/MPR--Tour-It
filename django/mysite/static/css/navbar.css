@@ -8,6 +8,7 @@ nav{
     height: 55px;
     background-color: #ebede4;
     line-height: 50px;
+    color: #0984e3;
 }
 
 nav ul{
@@ -21,17 +22,21 @@ nav ul li{
     display: inline-block;
     line-height: 50px;
     color: #0984e3;
+    
 
 }
 
-nav ul li a{
+nav ul.right-menu li a{
     text-decoration: none;
     padding: 15px;
-    font-size: 20px;
     color: #0984e3;
-
 }
 
+nav ul#title li a{
+    text-decoration: none;
+    color: #0984e3;
+    font-size: 30px;
+}
 #logo{
     width: 30px;
     height: 30px;
@@ -47,52 +52,20 @@ nav ul li a{
     float: right;
 }
 
-#title{
-    font-size: 18px;
+#title {
+    font-size: 20px;
     float: left;
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     font-style: italic;
     color: #0984e3;
     letter-spacing: 0.3mm;
     margin-left: 10px;
 }
 
+
 .content{
     margin-right: 0px;
     color: #0984e3;
-    font-family: 'Raleway', sans-serif;
-}
-
-.sidenav{
-    position: absolute;
-    top: 55px;
-    left: 0;
-    height: 188vh;
-    width: 225px;
-    background-color: #ebede4;
-    transition: transform 250ms ease-in-out;
-}
-
-.visiting{
-    background: #0984e3;
-}
-
-.disappear{
-    transform: translateX(-100%);
-}
-
-.appear{
-    transform: translateX(0%);
-}
-
-.menu{
-    display: block;
-    font-size: 20px;
-    transition: all 100ms ease-in-out;
-}
-
-.menu:hover{
-    background-color: #54a0ff;
-    color:white;
-    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 18px;
 }
