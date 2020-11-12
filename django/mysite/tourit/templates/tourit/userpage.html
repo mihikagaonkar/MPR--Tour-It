@@ -12,20 +12,35 @@
     <link rel="stylesheet" href="{% static '/css/Carousel 3.0.css' %}">
     <link rel="stylesheet" href="{% static '/css/heading.css' %}">
     <link rel="stylesheet" href="{% static '/css/copyright.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
 </head>
 
 <body>
     <div>
-        {%  include 'tourit/navbar.html' %}
+        <nav>
+            <img id='logo' src="/images/logo.png" alt="logo">
+            <ul id='title'>
+                <li>
+                    <h1>Tour It</h1>
+                </li>
+            </ul>
+            <img id='user' src="/images/user.png" alt="user">
+            <ul class="right-menu">
+                <li class="content"><a href="{% url 'tourit:trip' %}">Trips</a></li>
+                <li class="content"><a href="{% url 'tourit:logout' %}">Logout</a></li>
+                <li class="content"><a href="{% url 'tourit:account' %}">Profile</a></li>
+            </ul>
+        </nav>
     </div>
 
 
 
     <div class="home">
         <div class="slider">
-            <div class="slide active" style="background-image: url('/static/images/Desert.jpg');"></div>
-            <div class="slide" style="background-image: url('/static/images/Hydrangeas.jpg');"></div>
-            <div class="slide" style="background-image: url('/static/images/Jellyfish.jpg');"></div>
+            <div class="slide active" style="background-image: url('/static/images/carousel1.jpg');" alt="random text" ></div>
+            <div class="slide" style="background-image: url( '/static/images/carousel6.jpg' );"></div>
+            <div class="slide" style="background-image: url('/static/images/carousel4.jpg');"></div>
+            <div class="slide" style="background-image: url('/static/images/carousel7.jpg');"></div>
         </div>
 
         <div class="controls">
@@ -79,7 +94,7 @@
         </div>
     </div>
 
-    <p class="copyright">Copyright &copy; 2020. All rights Reserved</p>
+    <div class="copyright"><h6>Copyright &copy; 2020. All rights Reserved</h6></div>
 
     <script src="{% static '/js/automatic.js' %}"></script>
     <script src="{% static '/js/Carousel 3.0.js' %}"></script>
