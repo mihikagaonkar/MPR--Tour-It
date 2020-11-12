@@ -183,7 +183,7 @@ i{
   text-decoration: none;
   color: #0984e3;
 }
-.card_container a:hover{
+.card_container button:hover a{
   color:white;
 
 }
