@@ -8,7 +8,7 @@
        <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="{% static '/css/detail.css' %}">
-       <link rel="stylesheet" href="{% static '/css/navbar1.css' %}"></link>
+       
 
 
    </head>
@@ -16,26 +16,27 @@
    <body>
      <nav>
      <div>
-         {%  include 'tourit/navbar.html' %}
+        {%  include 'tourit/navbar.html' %}
      </div>
-         {%  include 'tourit/sidenav.html' %}
+        {%  include 'tourit/sidenav.html' %}
 
      </nav>
        <div class="box">
            <div class="box-img">
                <img src="{{ place.pic.url}}" alt="">
-               <div class="text-wrp">
+               
                    <h1>{{place.name}}</h1>
-               </div>
+               
                <div class="instruct">
-                   <h4>*hover for more info</h4>
+                   <h4>*Hover for more information</h4>
                </div>
+               
            </div>
            <div class="box-content">
                <h2>{{place.name}}</h2>
                <div class="location">
                    <i class="fa fa-map-marker " ></i>
-                   <h4>{{place.location}}r</h4>
+                   <h4>{{place.location}}</h4>
                </div>
 
                <p >
