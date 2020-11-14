@@ -2,7 +2,7 @@
     position: absolute;
     top: 55px;
     left: 0;
-    height: 188vh;
+    height: 94vh;
     width: 225px;
     background-color: #ebede4;
     transition: transform 250ms ease-in-out;
@@ -35,3 +35,12 @@
 .menu:hover a{
     color: white;
 }
+.menu a{
+    color: #0984e3;
+    text-decoration: none;
+
+}
+
+.container{
+    color: #0984e3;
+  }
