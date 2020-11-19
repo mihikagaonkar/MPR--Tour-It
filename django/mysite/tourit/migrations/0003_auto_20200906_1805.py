@@ -18,6 +18,9 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=200, null=True)),
                 ('location', models.CharField(max_length=200, null=True)),
                 ('description', models.CharField(max_length=200, null=True)),
+                ('address', models.CharField(max_length=200, null=True)),
+                ('phone', models.CharField(max_length=200, null=True)),
+                ('website', models.CharField(max_length=200, null=True)),
             ],
         ),
         migrations.CreateModel(
