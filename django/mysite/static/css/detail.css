@@ -90,3 +90,14 @@
 .box-content i{
   float: left;
 }
+.address{
+  text-align: left;
+}
+
+.phone{
+  text-align: left;
+}
+
+.website{
+  text-align: left;
+}
