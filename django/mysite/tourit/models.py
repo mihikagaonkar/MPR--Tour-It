@@ -15,6 +15,9 @@ class PlaceType(models.Model): #tag
 class Place(models.Model): #product
     name = models.CharField(max_length=200, null=True)
     location = models.CharField(max_length=200, null=True)
+    address = models.CharField(max_length=2000, null=True, blank=True)
+    phone number = models.CharField(max_length=2000, null=True, blank=True)
+    website = models.CharField(max_length=2000, null=True, blank=True)
     description = models.CharField(max_length=2000, null=True, blank=True)
     placetypes = models.ForeignKey(PlaceType, null = True, on_delete =models.CASCADE)
     pic = models.ImageField(null=True, blank=True)
