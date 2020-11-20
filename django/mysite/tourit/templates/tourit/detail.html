@@ -8,6 +8,7 @@
        <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="{% static '/css/detail.css' %}">
+       <link rel="stylesheet" href="{% static '/css/copyright.css' %}">
        
 
 
@@ -52,7 +53,9 @@
                </p>
            </div>
        </div>
-
+        <div class="copyright">
+            {%  include 'tourit/copyright.html' %}
+        </div>
        <script src="static/heart.js"></script>
        <!-- <script src="./sidenav.js"></script> -->
    </body>
