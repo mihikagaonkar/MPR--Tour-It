@@ -1,20 +1,67 @@
 {% load static %}
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-Hey there,
-{{ request.user}}
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/622c95e3fd.js" crossorigin="anonymous"></script>
 
-{% for k in order.get_itinerary_items %}
-<a href="{% url 'tourit:delete_item' k.id %}" data-balloon="remove this item from cart" class="text-danger" onclick="return confirm_delete();">
-<li>  {{ k.product.name}} </li>
-{% endfor%}
+      <link rel="stylesheet" href="{% static '/css/itinerary.css' %}"></link>
+      <link rel="stylesheet" href="{% static '/css/copyright.css' %}">
 
-</section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div >
+        {%  include 'tourit/navbar.html' %}
+      </div>
 
-<script>
-  function confirm_delete(){
-    return confirm("do you want to remove this item from your itinerary");
-  }
-  </script>
+       
+    </nav>
+      <div class="hey">Hey {{request.user}} welcome to your itinerary</div>
+      <div class="message">
+      {% for message in messages %}
+            {{message}}
+            {%endfor%}
+          </div>
+     <div class="grid_container">
+
+     <div class="card_container">
+
+       {% for k in order.get_itinerary_items %}
+         {% if k.product.name|length == 0 %}
+          <div>hey your itinerary is empty</div>
+          k
+         {% else %}
+            <div class="card">
+             <div class="image"><img src="{{ k.product.pic.url}}"alt=""></div>
+             <div class="name"></div>
+             <div class="location"><li> {{ k.product.name}} </li></div>
+             <button class="explore"><a href="{% url 'tourit:detail' k.product.id %}"> explore </a></button>
+             <button class = "explore"><a href="{% url 'tourit:delete_item' k.id %}" data-balloon="remove this item from cart" class="text-danger" onclick="return confirm_delete();">delete </a></button>
+            </div>
+
+
+         {% endif %}
+       {% endfor %}
+       
+   </div>
+   </div>
+   <div class="copyright">
+    {%  include 'tourit/copyright.html' %}
+    </div>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+     <script src="{% static '/js/heart.js' %}"></script>
+     <script src="{% static '/js/sidenav.js' %}"></script>
+
+
+     <script>
+       function confirm_delete(){
+         return confirm("do you want to remove this item from your itinerary");
+       }
+       </script>
+  </body>
+</html>
