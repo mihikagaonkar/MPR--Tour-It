@@ -13,25 +13,18 @@
     <link rel="stylesheet" href="{% static '/css/account.css' %}" >
 </head>
 <body>
+    <a href="{% url 'tourit:user' %}">back to home</a>
     <h1>Account Settings</h1>
     	<img src="{{request.user.customer.profile_pic.url}}" >
     <div class="line"></div>
-    <form class="form" action="" method="POST">
+    <form class="form" action="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 
         <div class = "box">
 					<div class = "box">
-							<label >Username:</label>
-							{{form.name}}
+							{{form.as_p}}
 					</div>
-					<div class = "box">
-							<label >Email:</label>
-							{{form.email}}
-					</div>
-					<div class = "box">
-							<label >Change profile picture:</label>
-							{{ form.profile_pic }}
-					</div>
+
 					<input type="submit" class="submit-btn" value="Submit">
         </div>
     </form>

@@ -97,8 +97,6 @@ def accountSettings(request):
         if form.is_valid():
             form.save()
 
-
-
     context={'form':form}
     return render(request,'tourit/account_settings.html', context)
 

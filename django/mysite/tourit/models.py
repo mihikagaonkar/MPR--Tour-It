@@ -9,6 +9,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 class PlaceType(models.Model): #tag
     name = models.CharField(max_length=200, null=True)
+    placetypepic = models.ImageField(null=True, blank=True)
     def __str__(self):
         return self.name  #i.e restaurants,shopping,hotel,park etc
 
