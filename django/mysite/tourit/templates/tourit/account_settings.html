@@ -15,7 +15,7 @@
 <body>
     <a href="{% url 'tourit:user' %}">back to home</a>
     <h1>Account Settings</h1>
-    	<img src="{{request.user.customer.profile_pic.url}}" >
+    	<img src="{% static '/images/user.png' %}" >
     <div class="line"></div>
     <form class="form" action="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}

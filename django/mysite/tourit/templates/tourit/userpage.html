@@ -55,15 +55,16 @@
         <div class="container">
             <ul class="track">
                 <li class="slide current_slide">
-                      {% for placetype in placetypes %}
+                    {% for placetype in placetypes %}
                     {% if forloop.counter|divisibleby:5 %}
                     <li class="slide">
                     <div class="card_container">
-                        <div><img src="{{ placetype.placetypepic.url}}" alt=""></div>
+                        <div class="image"><img src="{{ placetype.placetypepic.url}}" alt=""></div>
                         <p>{{placetype}}</p>
                         <button class="explore"><a href="{% url 'tourit:list' placetype.id %}">explore</a></button>
                     </div>
-
+                
+                
                     {% else %}
 
                     <div class="card_container">
@@ -71,10 +72,11 @@
                         <p>{{placetype}}</p>
                         <button class="explore"><a href="{% url 'tourit:list' placetype.id %}">explore</a></button>
                     </div>
-
+                    
 
                     {% endif %}
                    {% endfor %}
+                
 
             </ul>
         </div>
