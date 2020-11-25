@@ -50,6 +50,7 @@ nav ul#title li a{
     margin: 10px auto;
     margin-right: 10px;
     float: right;
+    border-radius: 50%;
 }
 
 #title {
