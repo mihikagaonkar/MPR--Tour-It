@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 h1{
-    margin: auto;
+    margin-top: 10px;
     text-align: center;
     margin-top: 10px;
     color: #0984E3;
@@ -25,7 +25,7 @@ img{
     height: 80%;
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 17%;
 }
 
 .form{
@@ -89,4 +89,41 @@ label{
 input{
     border: none;
     border-bottom: 2px solid #0984E3;
+}
+
+.home_btn{
+    margin: 5px 5px;
+    display: block;
+    padding: 8px 0px 8px 20px;
+    color: #0984E3;
+    width: 120px;
+    border: 2px solid #0984E3;
+    border-radius: 10px;
+    transition: all 250ms ease-in-out;
+    font-weight: bold;
+    background: none;
+    outline: 0;
+}
+
+.home-btn:hover{
+    background-color: #0984E3;
+    color: white;
+}
+.home_btn a{
+    text-decoration: none;
+    color: #0984E3;
+}
+
+input#file-upload-button{
+    margin: 5px 5px;
+    display: block;
+    padding: 8px 0px 8px 20px;
+    color: #0984E3;
+    width: 120px;
+    border: 2px solid #0984E3;
+    border-radius: 10px;
+    transition: all 250ms ease-in-out;
+    font-weight: bold;
+    background: none;
+    outline: 0;
 }

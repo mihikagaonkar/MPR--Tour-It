@@ -27,7 +27,7 @@
         {% for placetype in places %}
         <div class="card">
             <div class="image"><img src="{{ placetype.pic.url}}"alt=""></div>
-            <button class="heart"><i class="far fa-heart"></i></button>
+            
             <div class="name"></div>
             <div class="location">{{placetype.name}}</div>
             <button class="explore"><a href="{% url 'tourit:detail' placetype.id %}"> explore </a></button>

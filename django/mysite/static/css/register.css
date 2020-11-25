@@ -16,7 +16,7 @@
 
 }
 h1{
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
     text-decoration: underline;
     color: #0984E3;
@@ -63,4 +63,14 @@ input{
   border: none;
   outline: none;
   margin-left: 4px;
+}
+.error{
+    margin: 40px;
+}
+.error .errorlist li{
+    text-align: center;
+    list-style-type: none;
+}
+.error .errorlist li #text{
+    font-size: 0%;
 }
