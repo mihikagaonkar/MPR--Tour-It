@@ -63,15 +63,19 @@ i{
 }
 
 .between{
-  text-decoration: none;
-  align-items:  center;
-  margin-left: 65px;
+    text-decoration: none;
+    align-items:  center;
+    text-align: center;
+    margin-top: 5px;
 }
 
+.forgot{
+    margin-top: 10px;
+}
 a:link, a:visited{
-  text-decoration: none;
-  margin: 140px;
-  color: black;
+    
+    margin: 140px;
+    color: #0984E3
 }
 
 a:hover{
