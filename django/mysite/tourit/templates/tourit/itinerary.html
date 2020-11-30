@@ -19,7 +19,16 @@
 
        
     </nav>
-      <div class="hey">Hey {{request.user}} welcome to your itinerary</div>
+   
+    <div>
+        <div class="home_btn_trip">
+          <a href="{% url 'tourit:user' %}">back to home</a>
+        </div>
+        <div class="hey">
+          
+          Hey {{request.user}} welcome to your itinerary
+        </div>
+    </div>
       <div class="message">
       {% for message in messages %}
             {{message}}

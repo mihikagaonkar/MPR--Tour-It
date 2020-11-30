@@ -3,7 +3,7 @@
 
   <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
     <nav>
-        <img id='logo' src="/images/logo.png" alt="logo">
+        <a href = "{% url 'tourit:user' %}" ><img id='logo' src="/images/logo.png" alt="logo"></a>
         <ul id='title'>
             <li>
                 <h1><a href = "{% url 'tourit:user' %}" >Tour It</a></h1>

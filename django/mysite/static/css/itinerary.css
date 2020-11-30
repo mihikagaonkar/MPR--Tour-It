@@ -122,3 +122,25 @@ a:link, a:visited{
     text-align: center;
     margin-bottom: 10px;
 }
+.home_btn_trip{
+    margin: 5px 5px;
+    display: block;
+    padding: 8px 0px 8px 20px;
+    color: #0984E3;
+    width: 120px;
+    border: 2px solid #0984E3;
+    border-radius: 10px;
+    transition: all 250ms ease-in-out;
+    font-weight: bold;
+    background: none;
+    outline: 0;
+}
+
+.home-btn_trip:hover{
+    background-color: #0984E3;
+    color: white;
+}
+.home_btn_trip a{
+    text-decoration: none;
+    color: #0984E3;
+}
