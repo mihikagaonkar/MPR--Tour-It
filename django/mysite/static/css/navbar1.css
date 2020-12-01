@@ -29,6 +29,7 @@ img{
     border-top-left-radius: 5px;
 }
 
+
 .card{
     background: white;
     text-align: center;
@@ -68,7 +69,7 @@ i{
 
 
 .name{
-    margin-top: 15px;
+    margin: 15px;
 }
 
 .location{
@@ -108,4 +109,3 @@ a:link, a:visited{
 .card a{
   outline: none;
 }
-
